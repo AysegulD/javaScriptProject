@@ -1,0 +1,121 @@
+body{
+    width: 100vw;
+    height: 100vh;
+    margin: 0;
+    background-image: linear-gradient(10deg,rgb(20, 20, 20) 20.5%,
+    rgb(166, 166, 184) 80%);
+    font-family: 'Merriweather', serif;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+}
+h1{
+   padding: 0 0 25px 0;
+}
+#cover{
+    width: 20vw;
+}
+.container{
+padding: 50px;
+background-color: #ffff;
+border-radius: 20px;
+}
+.slider{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin: 10px 0;
+  
+}
+.slider i{
+    color:black;
+    font-size: 20px;
+
+}
+.slide{ 
+    margin: 15px 15px;
+}
+input[type=range]{
+    -webkit-appearance: none;
+}
+input[type=range]::-webkit-slider-thumb {   
+    -webkit-appearance: none; 
+}
+input[type=range]:focus {
+     outline: none;
+}
+input[type=range]::-ms-track {  
+     width: 100%;   
+     cursor: pointer;    
+     background: transparent;    
+     border-color: transparent;   
+     color: transparent; 
+}
+input[type=range]::-webkit-slider-runnable-track {
+    width: 300px;
+    height: 8px;
+    background: #515c5c;
+    border: none;
+    border-radius: 10px;
+}
+input[type=range]::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    border: none;
+    height: 16px;
+    width: 16px;
+    border-radius: 50%;
+    background: rgb(32, 32, 32);
+    border:1px solid rgb(17, 17, 17);
+    margin-top: -4px;
+}
+@media screen and (-webkit-min-device-pixel-ratio:0) {
+    input[type=’range’] {
+    overflow: hidden;
+    width: 150px;
+    -webkit-appearance: none;
+    background-color: rgb(94, 81, 81);
+    }
+
+    input[type=’range’]::-webkit-slider-thumb {
+    width: 10px;
+    -webkit-appearance: none;
+    height: 16px;
+    cursor: pointer;
+    background: #793a3a;
+    box-shadow: -80px 0 0 80px #008489;
+    
+    }}
+.controller{
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    z-index: 2;
+}
+.btn{
+    background-color:#ffff;
+    color: rgb(145, 140, 140);
+    font-size: 20px;
+    cursor:pointer;
+    padding: 10px;
+    margin: 0 20px;
+    border-style: none;
+   
+}
+.btnPlay{
+    color:rgb(20, 20, 20);
+    font-size:40px;
+
+}
+.info h3{
+    font-size: 28px;
+    font-weight: bold;
+    text-align: center;
+}
+.info h4{
+    font-size: 20px;
+    font-weight: bold;
+    text-align: center;
+    color: #4f6464;
+}
