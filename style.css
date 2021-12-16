@@ -2,27 +2,55 @@ body {
     width: 100vw;
     height: 100vh;
     margin: 0;
-    background-image: linear-gradient(10deg, rgb(20, 20, 20) 20.5%,
-            rgb(166, 166, 184) 80%);
+            /* background: linear-gradient(-40deg, #41332d, #4b4949, #274450, #355850,
+            rgba(54, 53, 53, 0));
+            background-size: 300% 400%;
+            animation: gradient 15s ease infinite; */
     font-family: 'Merriweather', serif;
     display: flex;
     align-items: center;
     flex-direction: column;
-    justify-content: center;
+    justify-content: center;  
 }
-
-h1 {
-    padding: 0 0 25px 0;
+#bodyImg{
+    object-fit: cover;
+    height: 100vh;
+    width: 100vw;
+    margin: auto;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    filter: blur(7px);
+    z-index: -1;
 }
-
+.imgContainer{      
+display: flex;
+justify-content: center;
+align-items: center;
+position: relative;     
+}
+/* @keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+} */
 #cover {
     width: 20vw;
+    box-shadow: 20px 20px 30px 10px rgb(42, 45, 48);
+    border-radius: 15px;    
 }
-
 .container {
-    padding: 50px;
-    background-color: #ffff;
+    padding: 25px;
+    background-color: rgb(77, 88, 100);
     border-radius: 20px;
+    position:absolute;   
 }
 
 .slider {
@@ -33,108 +61,75 @@ h1 {
     margin: 10px 0;
 
 }
-
 .slider i {
     color: black;
     font-size: 20px;
-
 }
-
-.slide {
+.slide,.progress-slide {
     margin: 15px 15px;
 }
-
-input[type=range] {
+.progress-slide, .slide {
     -webkit-appearance: none;
-}
-
-input[type=range]::-webkit-slider-thumb {
-    -webkit-appearance: none;
-}
-
-input[type=range]:focus {
-    outline: none;
-}
-
-input[type=range]::-ms-track {
-    width: 100%;
-    cursor: pointer;
-    background: transparent;
-    border-color: transparent;
-    color: transparent;
-}
-
-input[type=range]::-webkit-slider-runnable-track {
-    width: 300px;
-    height: 8px;
-    background: #515c5c;
-    border: none;
+    -moz-appearance: none;
+    appearance: none;
+    height: 6px;
+    background: black;
+    opacity: 0.8;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
     border-radius: 10px;
-}
-
-input[type=range]::-webkit-slider-thumb {
+  }  
+  .progress-slide::-webkit-slider-thumb,
+  .slide::-webkit-slider-thumb {
     -webkit-appearance: none;
-    border: none;
-    height: 16px;
-    width: 16px;
+    -moz-appearance: none;
+    appearance: none;
+    width: 15px;
+    height: 15px;
+    background: rgb(145, 140, 140);
+    cursor: pointer;
     border-radius: 50%;
-    background: rgb(32, 32, 32);
-    border: 1px solid rgb(17, 17, 17);
-    margin-top: -4px;
+  }
+.progress-div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
-
-@media screen and (-webkit-min-device-pixel-ratio:0) {
-    input[type=’range’] {
-        overflow: hidden;
-        width: 150px;
-        -webkit-appearance: none;
-        background-color: rgb(94, 81, 81);
-    }
-
-    input[type=’range’]::-webkit-slider-thumb {
-        width: 10px;
-        -webkit-appearance: none;
-        height: 16px;
-        cursor: pointer;
-        background: #793a3a;
-        box-shadow: -80px 0 0 80px #008489;
-
-    }
+.progress-slide{
+    width: 70%;
 }
-
+#currentTime,#durationTime{
+    font-family: 'Open Sans', sans-serif; 
+    font-size: 16px;
+    font-weight: bold;   
+}
 .controller {
     display: flex;
     align-items: center;
     justify-content: center;
     z-index: 2;
 }
-
 .btn {
-    background-color: #ffff;
+    background-color: rgb(17, 17, 17);
     color: rgb(145, 140, 140);
     font-size: 20px;
     cursor: pointer;
     padding: 10px;
     margin: 0 20px;
     border-style: none;
-
 }
-
 .btnPlay {
-    color: rgb(20, 20, 20);
+    color: rgb(145, 140, 140);
     font-size: 40px;
-
 }
-
 .info h3 {
     font-size: 28px;
     font-weight: bold;
     text-align: center;
 }
-
 .info h4 {
     font-size: 20px;
     font-weight: bold;
-    text-align: center;
-    color: #4f6464;
+    text-align: center; 
+    color:rgb(145, 140, 140);
 }
